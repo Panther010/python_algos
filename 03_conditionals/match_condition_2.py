@@ -32,7 +32,7 @@ def process_event(event:dict) -> str:
 
 def process_event2(event: dict) -> str:
     match event:
-        # 1. Successful Ingestion (Binding variables directly)
+        # 1. Successful Ingestion (Binding variables directly) push validation
         case {"type": "ingestion", "status": "success", "rows": rows, "source": source}:
             return f"Ingested {rows} rows from source: {source}"
             
