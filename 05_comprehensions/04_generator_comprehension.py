@@ -2,7 +2,7 @@
 Context: 
     Senior and Lead interviews frequently grill you on memory complexity ($O(1)$ space). 
     Processing a 50GB file requires generators instead of loading everything into a list comprehension.
-
+need to work on generator
 Write a generator function or generator expression pipeline called stream_cleaned_logs(log_stream).
 It should take an iterable stream of raw log strings.
 Using a generator expression, it filters out lines starting with "DEBUG:" and strips whitespace.
