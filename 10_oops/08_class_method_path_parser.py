@@ -14,9 +14,9 @@ class PartitionedDataset:
     @classmethod
     def from_path(cls, uri: str)-> dict:
         return cls(
-            {data.split('=')[0] : data.split('=')[1]
+            dict(data.split('=', 1)
             for data in uri.split('/')
-            if "=" in data}
+            if "=" in data)
         )
 
 
