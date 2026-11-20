@@ -6,12 +6,12 @@ that reads "DB_HOST" and "DB_PORT" from the dictionary and returns an instance o
 """
 class WarehouseConnection:
 
-    def __init__(self, host, port) -> None:
+    def __init__(self, host: str, port: int) -> None:
         self.host = host
         self.port = port
 
     @classmethod
-    def from_env(cls, env_dict):
+    def from_env(cls, env_dict) -> str:
         return cls(
             host=env_dict["DB_HOST"],
             port=env_dict["DB_PORT"]
